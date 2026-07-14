@@ -2,7 +2,7 @@
 
 > **The ultimate, privacy-first toolkit for developers to edit, format, validate, compare, and transform JSON data directly in the browser.**
 
-JSON Lab is an enterprise-grade web application built to handle complex JSON operations. Designed with a strict **Separation of Concerns (SoC)** architecture, it features a dual-engine comparison system (Text & Tree), offline-first data persistence, bi-directional format converters, dynamic code generators, and a highly modular codebase.
+JSON Lab is an enterprise-grade web application built to handle complex JSON operations. Designed with a strict **Separation of Concerns (SoC)** architecture, it features a dual-engine comparison system (Text & Tree), bi-directional format converters, dynamic code generators, and a highly modular codebase.
 
 ---
 
@@ -146,7 +146,7 @@ src/
 
 1. **Clone the repository**
 ```bash
-git clone [https://github.com/puneetsharma997/json-lab.git](https://github.com/puneetsharma997/json-lab.git)
+git clone https://github.com/puneetsharma997/json-lab.git
 cd json-lab
 ```
 
