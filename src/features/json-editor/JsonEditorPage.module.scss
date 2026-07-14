@@ -1,0 +1,26 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+  transition: max-width 0.3s ease-in-out;
+  position: relative;
+}
+
+.singleMode {
+  max-width: 1400px;
+}
+
+.compareMode {
+  max-width: 100%;
+}
+
+.editorContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  border-radius: 0.6rem;
+  overflow: hidden;
+  height: calc(100vh - 220px);
+}

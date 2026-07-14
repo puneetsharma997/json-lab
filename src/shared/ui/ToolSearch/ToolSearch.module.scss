@@ -1,0 +1,53 @@
+.search {
+  width: 100%;
+  max-width: 32rem;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin-top: 0.5rem;
+  padding: 0rem 0.5rem;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.31rem;
+  flex-shrink: 0;
+  color: var(--text-primary);
+}
+
+.optionContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.optionTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.optionDescription {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+}
+
+.emptyTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.emptyDescription {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}

@@ -1,0 +1,13 @@
+.workspace {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-paper);
+}
+
+.editorContainer {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}

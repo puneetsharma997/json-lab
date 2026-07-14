@@ -1,0 +1,88 @@
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-paper);
+  gap: 0.8rem;
+}
+
+.documentInfo {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.nameDisplay {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.docName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  max-width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.24s ease;
+
+  &:hover {
+    background-color: var(--purple-hover-bg);
+  }
+}
+
+.editIcon {
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: transform 0.24s ease, color 0.24s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.nameInputWrapper {
+  margin-left: 1rem;
+  width: 100%;
+}
+
+.nameInput {
+  width: 100%;
+  height: 2.1rem;
+}
+
+.actionsGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin-left: 1rem;
+}
+
+.dropdownTitle {
+  font-size: 1rem;
+}
+
+.btnText {
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+:global(.ant-dropdown-menu-vertical) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+:global(.ant-dropdown-menu-title-content) {
+  font-size: 0.9rem;
+}

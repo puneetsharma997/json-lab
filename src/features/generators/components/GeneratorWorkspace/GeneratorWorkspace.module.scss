@@ -1,0 +1,39 @@
+.workspace {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-paper);
+}
+
+.editorContainer {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+
+  // /* overrides for react-split-pane standard classes */
+  // :global(.Resizer) {
+  //   background: var(--border-color);
+  //   opacity: 0.5;
+  //   z-index: 1;
+  //   box-sizing: border-box;
+  //   background-clip: padding-box;
+  // }
+
+  // :global(.Resizer:hover) {
+  //   transition: all 2s ease;
+  // }
+
+  // :global(.Resizer.vertical) {
+  //   width: 11px;
+  //   margin: 0 -5px;
+  //   border-left: 5px solid transparent;
+  //   border-right: 5px solid transparent;
+  //   cursor: col-resize;
+  // }
+
+  // :global(.Resizer.vertical:hover) {
+  //   border-left: 5px solid var(--primary-color-transparent);
+  //   border-right: 5px solid var(--primary-color-transparent);
+  // }
+}

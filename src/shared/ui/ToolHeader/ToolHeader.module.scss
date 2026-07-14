@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.title {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.highlight {
+  color: transparent;
+  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.description {
+  color: var(--text-secondary);
+  margin: 0;
+}

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// --- GLOBAL VARIABLES ---
+:root {
+  // Light mode variables
+  --bg-default: #f8fafc;
+  --bg-paper: #ffffff;
+  --bg-hover: #f1f5f9;
+  --bg-hover-purple: rgba(124, 58, 237, 0.08);
+  // Standard hover
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #94a3b8;
+  --border-color: #e2e8f0;
+
+  // Interactive Purple (Light Mode)
+  --purple-hover-bg: rgba(124, 58, 237, 0.08);
+  --purple-text: #7c3aed;
+
+  // Status Colors (Light Mode)
+  --success-text: #16a34a;
+  --error-text: #dc2626;
+
+  // Validation Panel Danger Theme (Light Mode)
+  --danger-bg: #fee2e2;
+  --danger-border: #fca5a5;
+  --danger-text: #991b1b;
+  --danger-highlight-bg: rgba(185, 28, 28, 0.1);
+  --danger-highlight-text: #b91c1c;
+
+  // Tree View Mode Colors (Light Mode)
+  --key-color: #a31515;
+  --value-color: #0451a5;
+}
+
+:root[data-theme="dark"] {
+  // Dark mode variables
+  --bg-default: #0f111a;
+  --bg-paper: #1e1e1e;
+  --bg-hover: #2a2a2a;
+  --bg-hover-purple: rgba(167, 139, 250, 0.12);
+  // Standard hover
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #475569;
+  --border-color: #334155;
+
+  --purple-hover-bg: rgba(167, 139, 250, 0.12);
+  --purple-text: #c4b5fd;
+
+  // Status Colors (Dark Mode) - Pastel versions
+  --success-text: #4ade80;
+  --error-text: #f87171;
+
+  // Validation Panel Danger Theme (Dark Mode) - Fixed visibility
+  --danger-bg: #2f1518;
+  --danger-border: #5c1b1b;
+  --danger-text: #fca5a5;
+  --danger-highlight-bg: rgba(248, 113, 113, 0.15);
+  --danger-highlight-text: #fecaca;
+
+  // Tree View Mode Colors (Light Mode)
+  --key-color: #9cdcfe;
+  --value-color: #ce9178;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bg-default);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: var(--font-geist-sans);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.split-pane-divider {
+  z-index: 1;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  transition: all 0.2s ease;
+  background-color: var(--border-color) !important;
+}
+
+.split-pane-divider.horizontal {
+  width: 1rem !important;
+  margin: 0 -3px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  cursor: col-resize;
+}
+
+// Compare mode difference highlight color
+.diff-removed-line {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+}
+
+.diff-added-line {
+  background-color: rgba(34, 197, 94, 0.15) !important;
+}

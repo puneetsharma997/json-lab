@@ -1,0 +1,19 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.workspaceContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  border-radius: 0.6rem;
+  overflow: hidden;
+  height: calc(100vh - 220px);
+  background-color: var(--bg-paper);
+}

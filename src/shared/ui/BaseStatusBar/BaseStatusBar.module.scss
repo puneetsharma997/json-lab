@@ -1,0 +1,35 @@
+.statusBar {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.875rem;
+}
+
+.statusSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+
+  &:last-child {
+    justify-content: flex-end;
+  }
+}
+
+.metricText {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.successText {
+  color: var(--success-text);
+  font-weight: 600;
+}
+
+.errorText {
+  color: var(--error-text);
+  font-weight: 600;
+}

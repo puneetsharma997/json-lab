@@ -1,0 +1,43 @@
+{
+  "name": "json-lab",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@ant-design/nextjs-registry": "^1.3.0",
+    "@monaco-editor/react": "^4.7.0",
+    "ajv": "^8.20.0",
+    "antd": "^6.5.0",
+    "deep-diff": "^1.0.2",
+    "diff": "^9.0.0",
+    "fast-xml-builder": "^1.3.0",
+    "fast-xml-parser": "^5.10.0",
+    "js-yaml": "^5.2.1",
+    "json-schema-to-zod": "^2.8.1",
+    "json-stringify-pretty-compact": "^4.0.0",
+    "json-to-ts": "^2.1.0",
+    "jsonc-parser": "^3.3.1",
+    "jsonpath-plus": "^10.4.0",
+    "jsonrepair": "^3.15.0",
+    "lucide-react": "^1.23.0",
+    "monaco-editor": "^0.55.1",
+    "next": "16.2.10",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-json-tree": "^0.20.0",
+    "react-split-pane": "^3.2.0",
+    "sass": "^1.101.0",
+    "to-json-schema": "^0.2.5",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "eslint": "^9",
+    "eslint-config-next": "16.2.10"
+  }
+}

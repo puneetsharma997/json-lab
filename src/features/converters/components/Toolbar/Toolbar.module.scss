@@ -1,0 +1,44 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-paper);
+}
+
+.leftGroup, .centerGroup, .rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.leftGroup, .rightGroup {
+  flex: 1;
+}
+
+.rightGroup {
+  justify-content: flex-end;
+}
+
+.centerGroup {
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.3rem 1rem;
+  border-radius: 6px;
+}
+
+.syncToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.toolbarBtn {
+  font-weight: 500;
+}
+
+.btnText {
+  font-size: 0.85rem;
+  font-weight: 500;
+}

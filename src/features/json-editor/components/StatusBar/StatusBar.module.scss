@@ -1,0 +1,57 @@
+.statusBar {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.875rem;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 0.36rem;
+  margin-left: 1rem;
+}
+
+.label {
+  color: var(--text-secondary);
+  font-size: 0.9rem
+}
+
+.value {
+  font-weight: 600;
+  font-size: 0.9rem
+}
+
+.success {
+  color: var(--success-text);
+  font-weight: 600;
+  font-size: 0.9rem
+}
+
+.error {
+  color: var(--error-text);
+  font-weight: 600;
+  font-size: 0.9rem
+}
+
+.diffNavigation {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  border-radius: 0.5rem;
+  margin-left: 0.6rem;
+}
+
+.diffCountText {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.statusBarBtn {
+  margin-left: 0.3rem;
+  background-color: var(--bg-hover-purple) !important;
+}
