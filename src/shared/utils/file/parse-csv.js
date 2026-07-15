@@ -27,11 +27,11 @@ export const convertCsvToJsonString = (csvContent) => {
 
       return result.map(val => {
         let clean = val.trim();
-        // Remove wrapping quotes and unescape internal double quotes
+        // remove wrapping quotes and unescape internal double quotes
         if (clean.startsWith('"') && clean.endsWith('"')) {
           clean = clean.substring(1, clean.length - 1).replace(/""/g, '"');
         }
-        // Auto-convert numeric strings to actual numbers for clean JSON
+        // auto-convert numeric strings to actual numbers for clean JSON
         if (!isNaN(clean) && clean !== "") {
           return Number(clean);
         }

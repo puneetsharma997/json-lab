@@ -32,7 +32,6 @@ export const getJsonDiagnostics = (value) => {
     }
     catch (error) {
       if (error instanceof Error) {
-        // Chrome, Edge aur Firefox ke extra location text ko remove karna
         errorMessage = error.message
           .replace(/( in JSON)? at position \d+.*$/i, '')
           .replace(/ at line \d+ column \d+$/i, '')

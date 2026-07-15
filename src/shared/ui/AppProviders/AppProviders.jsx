@@ -17,13 +17,12 @@ const AppProviders = ({ children }) => {
   const mounted = useMounted();
   const resolvedTheme = useResolvedTheme();
 
-  // Root element (HTML tag) par CSS variables activate karne ke liye theme lagana
   useEffect(() => {
     if (!mounted) return;
     document.documentElement.setAttribute('data-theme', resolvedTheme);
   }, [resolvedTheme, mounted]);
 
-  // Server-side rendering ke time flicker rokne ke liye
+  // prevent flicker on server side rendering
   if (!mounted) {
     return (
       <ConfigProvider theme={lightTheme}>

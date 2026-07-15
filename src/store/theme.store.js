@@ -8,7 +8,7 @@ export const useThemeStore = create(
       setTheme: (theme) => set({ theme }),
     }),
     {
-      name: 'json-lab-theme', // Ye local storage me is naam se save hoga
+      name: 'json-lab-theme', // this name will saved in local storage
     }
   )
 );

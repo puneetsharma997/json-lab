@@ -96,3 +96,15 @@
   line-height: 1.5;
   margin: 0;
 }
+
+@media (max-width: 500px) {
+  .home {
+    padding: 1.5rem 1rem;
+    gap: 2.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

@@ -58,3 +58,26 @@
 :global(.ant-dropdown-menu-item-group) {
   margin-bottom: 0.5rem;
 }
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .searchWrapper {
+    display: none;
+  }
+
+  .featureText {
+    font-size: 0.86rem;
+  }
+
+  .featureTitle {
+    font-size: 0.86rem;
+  }
+
+  .actions {
+    margin-right: 0.2rem;
+    gap: 0.2rem;
+  }
+}

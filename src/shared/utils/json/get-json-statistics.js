@@ -1,4 +1,5 @@
 
+// function to get json statistics (array counts, objects counts etc.)
 export function getJsonStatistics(json) {
   const statistics = { isValid: false, characters: json.length, objects: 0, arrays: 0, depth: 0, error: null };
 

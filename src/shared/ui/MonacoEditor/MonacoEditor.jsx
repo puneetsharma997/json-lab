@@ -30,7 +30,7 @@ const MonacoEditor = ({
   const editorTheme = resolvedTheme === 'dark' ? 'vs-dark' : 'vs';
 
   if (!mounted) {
-    // SSR ke time par empty div dikhaenge jisse layout shift na ho
+    // show empty div at the time of SSR to avoid layout shift
     return <div className={styles.editor} style={{ height, backgroundColor: 'var(--bg-paper)' }} />;
   }
 
