@@ -1,5 +1,6 @@
-
 .logoButton {
+  transition: transform 0.24s ease-in-out;
+
   &:hover {
     background-color: transparent !important;
     transform: scale(1.03);

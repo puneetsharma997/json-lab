@@ -60,8 +60,22 @@
 .backBtn {
   display: flex;
   align-items: center;
+  gap: 0.6rem;
   border: none;
   font-weight: 500;
+  height: 2.5rem;
+  padding: 0 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background-color: var(--purple-text);
+  color: #ffff;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 /* simple animation for the sparkle icon */

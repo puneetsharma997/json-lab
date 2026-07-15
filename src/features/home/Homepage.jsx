@@ -8,12 +8,11 @@
 "use client";
 
 import { toolNavigation } from "@/config/tool-navigation";
-import { useRouter } from "next/navigation";
 import styles from "./HomePage.module.scss";
 import ToolHeader from "@/shared/ui/ToolHeader/ToolHeader";
+import Link from "next/link";
 
 const HomePage = () => {
-  const router = useRouter();
 
   return (
     <div className={styles.home}>
@@ -40,12 +39,10 @@ const HomePage = () => {
                 const Icon = tool.icon;
 
                 return (
-                  <div
+                  <Link
                     key={tool.id}
+                    href={tool.path}
                     className={styles.card}
-                    onClick={() => router.push(tool.path)}
-                    role="button"
-                    tabIndex={0}
                   >
                     <div className={styles.cardHeader}>
                       <div className={styles.iconWrapper}>
@@ -56,7 +53,7 @@ const HomePage = () => {
                     <p className={styles.cardDescription}>
                       {tool.description}
                     </p>
-                  </div>
+                  </Link>
                 );
               })}
             </div>

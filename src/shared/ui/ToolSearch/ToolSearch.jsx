@@ -29,10 +29,21 @@ const ToolSearch = () => {
     }
   }, [searchValue]);
 
+  // memoize the filtered search results so they can be reused
+  // for both generating the dropdown options and prefetching the routes.
+  const filteredTools = useMemo(() => {
+    return searchTools(debouncedValue);
+  }, [debouncedValue]);
+
+  // programmatically prefetch the routes for all matching search results in the background.
+  useEffect(() => {
+    filteredTools.forEach((tool) => {
+      router.prefetch(tool.path);
+    });
+  }, [filteredTools, router]);
+
   // searched options results
   const options = useMemo(() => {
-    const filteredTools = searchTools(debouncedValue);
-
     if (debouncedValue && !filteredTools.length) {
       return [
         {
@@ -73,7 +84,7 @@ const ToolSearch = () => {
       ),
     }));
 
-  }, [debouncedValue]);
+  }, [debouncedValue, filteredTools]);
 
   return (
     <AutoComplete
@@ -86,9 +97,7 @@ const ToolSearch = () => {
           return;
         }
 
-        const selectedTool = searchTools(debouncedValue).find(
-          (tool) => tool.id === value
-        );
+        const selectedTool = filteredTools.find((tool) => tool.id === value);
 
         if (!selectedTool) {
           return;

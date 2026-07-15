@@ -11,13 +11,12 @@ import Logo from "../Logo/Logo";
 import styles from "./Navbar.module.scss";
 import { Button, Dropdown } from "antd";
 import { ChevronDown } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
-import { getToolById } from "@/shared/utils/tool-navigation";
+import { usePathname } from "next/navigation";
 import ToolSearch from "../ToolSearch/ToolSearch";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import Link from "next/link";
 
 const Navbar = () => {
-  const router = useRouter();
   const pathname = usePathname();
 
   const dropdownItems = toolNavigation.flatMap((section) => [
@@ -32,18 +31,21 @@ const Navbar = () => {
           key: item.id,
           className: isActive ? styles.activeDropdownItem : "",
           label: (
-            <div className={styles.menuItem}>
+            <Link
+              href={item.path}
+              className={styles.menuItem}
+              style={{ display: "flex", width: "100%", textDecoration: "none" }}
+            >
               <item.icon
                 size={16}
                 className={isActive ? styles.activeMenuText : ""}
               />
-
               <span
                 className={`${styles.featureTitle} ${isActive ? styles.activeMenuText : ""}`}
               >
                 {item.title}
               </span>
-            </div>
+            </Link>
           ),
         }
       }),
@@ -60,16 +62,7 @@ const Navbar = () => {
 
       <div className={styles.actions}>
         <Dropdown
-          menu={{
-            items: dropdownItems,
-            onClick: ({ key }) => {
-              const selectedTool = getToolById(String(key));
-
-              if (selectedTool) {
-                router.push(selectedTool.path);
-              }
-            },
-          }}
+          menu={{ items: dropdownItems }}
           trigger={["click"]}
         >
           <Button type="text">

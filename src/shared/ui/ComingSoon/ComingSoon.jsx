@@ -5,13 +5,12 @@
 
 "use client";
 
-import { useRouter } from "next/navigation";
-import { Button } from "antd";
 import { ArrowLeft, Hammer, Sparkles } from "lucide-react";
 import styles from "./ComingSoon.module.scss";
+import Link from "next/link";
 
+// Coming Soon component
 const ComingSoon = ({ title = "This Feature" }) => {
-  const router = useRouter();
 
   return (
     <div className={styles.container}>
@@ -27,15 +26,13 @@ const ComingSoon = ({ title = "This Feature" }) => {
           We are currently building this tool in the lab. It will be ready for you to use very soon! Stay tuned.
         </p>
 
-        <Button
-          type="primary"
-          size="large"
-          icon={<ArrowLeft size={16} />}
-          onClick={() => router.push("/")}
+        <Link
+          href="/"
           className={styles.backBtn}
         >
-          Back to Home
-        </Button>
+          <ArrowLeft size={16} />
+          <span>Back to Home</span>
+        </Link>
       </div>
     </div>
   );

@@ -5,28 +5,25 @@
 
 "use client"
 
-import { Button } from "antd";
 import styles from "./Logo.module.scss";
-import { useRouter } from "next/navigation";
 import ToolHeader from "../ToolHeader/ToolHeader";
+import Link from "next/link";
 
 const Logo = () => {
-  const router = useRouter();
-
-  // function to go to the home page when the logo is clicked
-  const handleLogoClick = () => {
-    router.push("/");
-  }
 
   return (
     <div className={styles.logo}>
-      <Button type="text" onClick={handleLogoClick} className={styles.logoButton}>
+      <Link
+        href="/"
+        className={styles.logoButton}
+        style={{ textDecoration: "none", display: "inline-block" }}
+      >
         <ToolHeader
           title="JSON Lab"
           highlight="JSON"
           titleFontSize="1.5rem"
         />
-      </Button>
+      </Link>
     </div>
   );
 };
