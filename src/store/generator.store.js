@@ -4,6 +4,7 @@
  * handles the one-way data flow (json input -> generated code output).
  */
 
+import { GENERATOR_DEFAULT_JSON } from "@/shared/constants/default-json";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
@@ -38,12 +39,17 @@ export const useGeneratorStore = create(
         inputError: null
       }),
 
+      // load default sample data for quick testing
+      loadSample: () => set({
+        jsonInput: GENERATOR_DEFAULT_JSON,
+        inputError: null
+      }),
+
       // tool change logic (clear data if switching tools)
       setActiveTool: (currentType) => {
         const lastType = get().lastUsedType;
         if (lastType && lastType !== currentType) {
           set({
-            jsonInput: "",
             generatedOutput: "",
             inputError: null,
             lastUsedType: currentType,

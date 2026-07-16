@@ -102,9 +102,14 @@ src/
 │   │   ├── components/       # Shared workspace, toolbar (with auto/manual sync), and UI
 │   │   ├── hooks/            # useGeneratorLogic.js, Formatters & Exporters
 │   │   └── GeneratorPage.jsx # Dynamic page shell for generating code outputs
-│   └── json-editor/          # The core JSON Editor application
-│       ├── components/       # Editor UI components (Toolbar, ValidationPanel, etc.)
-│       └── hooks/            # Granular hooks (Diffing, Formatting, File IO)
+│   ├── json-editor/          # The core JSON Editor application
+│   │   ├── components/       # Editor UI components (Toolbar, ValidationPanel, etc.)
+│   │   └── hooks/            # Granular hooks (Diffing, Formatting, File IO)
+│   └── utilities/            # Developer utilities and specialized tools
+│       └── jsonpath-tester/  # The core JSONPath Tester application
+│           ├── components/   # QueryInput, Workspace, Toolbar, Statusbar
+│           ├── hooks/        # usePathTesterLogic.js, Formatters, Exporters
+│           └── JSONPathTesterPage.jsx # Page wrapper for the utility tool
 ├── shared/                   # Reusable cross-feature modules
 │   ├── constants/            # Default JSON, Tool Mappings
 │   ├── hooks/                # Global hooks (useApp, useMounted, useResolvedTheme)
@@ -114,6 +119,7 @@ src/
     ├── editor.store.js       # Handles multi-document states for JSON Editor
     ├── converter.store.js    # Lightweight scratchpad state for converters
     ├── generator.store.js    # Context-aware generator state with auto-hydration
+    ├── path-tester.store.js  # Persistent scratchpad for JSONPath inputs and queries
     └── theme.store.js        # Global theme persistence
 ```
 

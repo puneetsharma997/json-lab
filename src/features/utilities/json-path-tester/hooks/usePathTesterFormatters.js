@@ -1,14 +1,14 @@
 /**
- * custom hook to handle json formatting operations for the generator input pane.
- * bridges the generator store with the shared formatters logic.
+ * custom hook to handle json formatting operations for the path tester input pane.
+ * bridges the path tester store with the shared formatters logic.
  */
 
-import { useGeneratorStore } from "@/store/generator.store";
+import { usePathTesterStore } from "@/store/path-tester.store";
 import { useFormatters } from "@/shared/hooks/useFormatters";
 
-export const useGeneratorFormatters = () => {
-  const jsonInput = useGeneratorStore((state) => state.jsonInput);
-  const setJsonInput = useGeneratorStore((state) => state.setJsonInput);
+export const usePathTesterFormatters = () => {
+  const jsonInput = usePathTesterStore((state) => state.jsonInput);
+  const setJsonInput = usePathTesterStore((state) => state.setJsonInput);
 
   const { format, smartFormat, minify } = useFormatters();
 

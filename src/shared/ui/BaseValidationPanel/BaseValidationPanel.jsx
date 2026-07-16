@@ -70,6 +70,7 @@ const BaseValidationPanel = ({ value, onRepair, onShowError }) => {
           type="primary"
           danger icon={<WandSparkles size={16} />}
           onClick={handleAutoRepair}
+          size="medium"
         >
           Auto Repair
         </Button>
@@ -77,6 +78,7 @@ const BaseValidationPanel = ({ value, onRepair, onShowError }) => {
         <Button
           danger icon={<Eye size={16} />}
           onClick={handleShowClick}
+          size="medium"
         >
           Show
         </Button>

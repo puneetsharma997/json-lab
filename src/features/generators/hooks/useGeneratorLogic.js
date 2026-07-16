@@ -18,6 +18,7 @@ export const useGeneratorLogic = (type) => {
   const autoGenerate = useGeneratorStore((state) => state.autoGenerate);
   const jsonInput = useGeneratorStore((state) => state.jsonInput);
   const generatedOutput = useGeneratorStore((state) => state.generatedOutput);
+  const lastUsedType = useGeneratorStore((state) => state.lastUsedType);
 
   const setActiveTool = useGeneratorStore((state) => state.setActiveTool);
 
@@ -71,13 +72,15 @@ export const useGeneratorLogic = (type) => {
 
   // handle page refresh and state hydration
   useEffect(() => {
-    // if we have input but output is empty (which exactly happens on refresh)
-    // and auto-generate is turned on, regenerate the output automatically!
-    if (jsonInput && !generatedOutput && autoGenerate) {
-      generateOutputCode(jsonInput);
+    // if we have input and auto generated is ON
+    // regenerate the output automatically!
+    if (jsonInput && autoGenerate) {
+      if (!generatedOutput || lastUsedType !== type) {
+        generateOutputCode(jsonInput);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [jsonInput, generatedOutput, autoGenerate]);
+  }, [jsonInput, generatedOutput, autoGenerate, type]);
 
   // triggers every time user types in the left json editor
   const handleJsonChange = (value) => {

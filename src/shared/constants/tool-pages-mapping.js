@@ -8,6 +8,7 @@ import ConverterPage from "@/features/converters/ConverterPage";
 import GeneratorPage from "@/features/generators/GeneratorPage";
 import JsonEditorPage from "@/features/json-editor/JsonEditorPage";
 import ComingSoon from "../ui/ComingSoon/ComingSoon";
+import JSONPathTesterPage from "@/features/utilities/json-path-tester/JSONPathTesterPage";
 
 export const toolPagesMapping = {
   // editor
@@ -24,7 +25,7 @@ export const toolPagesMapping = {
   "json-schema-generator": () => <GeneratorPage type="schema" />,
 
   // utilities
-  "json-path-tester": () => <ComingSoon />,
+  "json-path-tester": () => <JSONPathTesterPage />,
   "mock-data-generator": () => <ComingSoon />,
   "json-visualizer": () => <ComingSoon />,
 };

@@ -1,0 +1,70 @@
+.queryContainer {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--bg-hover-purple);
+  padding: 0rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.searchIcon {
+  color: var(--purple-text);
+  pointer-events: none;
+}
+
+.input {
+  font-size: 1rem;
+}
+
+.input input::placeholder {
+  font-size: 0.95rem;
+  color: var(--purple-text);
+}
+
+.input {
+
+  &:focus,
+  &:focus-visible,
+  &:focus-within {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+.infoIcon {
+  color: var(--purple-text);
+  cursor: pointer;
+}
+
+.popoverContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 300px;
+}
+
+.popoverText {
+  font-size: 1rem;
+  color: var(--text-secondary);
+
+  strong {
+    color: var(--text-primary);
+    font-size: 1rem;
+  }
+}
+
+.codeBlock {
+  color: var(--purple-text);
+  background-color: var(--bg-secondary);
+  padding: 0rem 0.2rem;
+  border-radius: 4px;
+  font-family: var(--font-mono, monospace);
+  font-size: 1rem;
+}

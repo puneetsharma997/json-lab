@@ -23,7 +23,7 @@ const Toolbar = ({ type }) => {
   // logic hook
   const { handleJsonChange, triggerManualGenerate } = useGeneratorLogic(type);
   const { handleFormat, handleSmartFormat, handleMinify } = useGeneratorFormatters();
-  const { handleDownloadJson, handleCopyOutput } = useGeneratorExporters(type);
+  const { handleDownloadJson, handleCopyOutput } = useGeneratorExporters();
 
   // store states
   const autoGenerate = useGeneratorStore((state) => state.autoGenerate);

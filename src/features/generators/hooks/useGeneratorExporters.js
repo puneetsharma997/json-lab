@@ -1,32 +1,23 @@
 /**
  * custom hook to manage file export and clipboard operations for generators.
+ * acts as a bridge between the generator store and the shared exporters logic.
  */
 
-import { downloadFile } from "@/shared/utils/file/download-file";
 import { useGeneratorStore } from "@/store/generator.store";
-import { useApp } from "@/shared/hooks/useApp";
+import { useExporters } from "@/shared/hooks/useExporters";
 
-export const useGeneratorExporters = (type) => {
-  const { message } = useApp();
+export const useGeneratorExporters = () => {
   const jsonInput = useGeneratorStore((state) => state.jsonInput);
   const generatedOutput = useGeneratorStore((state) => state.generatedOutput);
 
-  // left pane, download json input
+  const { handleDownload, handleCopy } = useExporters();
+
   const handleDownloadJson = () => {
-    if (!jsonInput.trim()) {
-      return message.warning("JSON editor is empty!");
-    }
-    downloadFile(jsonInput, "input-data.json", "application/json");
-    message.success("Saved as input-data.json");
+    handleDownload(jsonInput, "input-data.json", "application/json");
   };
 
-  // right pane, copy to clipboard
-  const handleCopyOutput = async () => {
-    if (!generatedOutput.trim()) {
-      return message.warning("Generated output is empty!");
-    }
-    await navigator.clipboard.writeText(generatedOutput);
-    message.success("Code copied to clipboard!");
+  const handleCopyOutput = () => {
+    handleCopy(generatedOutput, "Code copied to clipboard!");
   };
 
   return { handleDownloadJson, handleCopyOutput };

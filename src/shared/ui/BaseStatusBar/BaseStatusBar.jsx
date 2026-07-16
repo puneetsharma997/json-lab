@@ -15,7 +15,8 @@ const BaseStatusBar = ({
   leftValue = "",
   rightValue = "",
   leftError = null,
-  rightError = null
+  rightError = null,
+  customRightStatus = null
 }) => {
 
   // calculate basic metrics for the left pane
@@ -43,14 +44,23 @@ const BaseStatusBar = ({
 
       {/* right pane status */}
       <div className={styles.statusSection}>
-        {rightError ? (
-          <span className={styles.errorText}>❌ Invalid {rightLabel}</span>
-        ) : (
-          <span className={styles.successText}>✅ Valid {rightLabel}</span>
-        )}
-        <span className={styles.metricText}>
-          {rightLines} Lines, {rightChars} Chars
-        </span>
+        {
+          customRightStatus ?
+            <span className={styles.successText}>
+              {customRightStatus}
+            </span>
+            :
+            <>
+              {rightError ? (
+                <span className={styles.errorText}>❌ Invalid {rightLabel}</span>
+              ) : (
+                <span className={styles.successText}>✅ Valid {rightLabel}</span>
+              )}
+              <span className={styles.metricText}>
+                {rightLines} Lines, {rightChars} Chars
+              </span>
+            </>
+        }
       </div>
     </footer>
   );

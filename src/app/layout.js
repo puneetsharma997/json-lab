@@ -3,6 +3,7 @@ import "./globals.scss";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import AppProviders from "@/shared/ui/AppProviders/AppProviders";
 import AppLayout from "@/shared/ui/AppLayout/AppLayout";
+import FloatingGitHub from "@/shared/ui/FloatingGitHub/FloatingGitHub";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,8 @@ export default function RootLayout({ children }) {
             <AppLayout>
               {children}
             </AppLayout>
+
+            <FloatingGitHub />
           </AppProviders>
         </AntdRegistry>
       </body>
