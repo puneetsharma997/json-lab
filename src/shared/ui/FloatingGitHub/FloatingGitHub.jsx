@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "./FloatingGitHub.module.scss";
-import githubImg from "@/assets/github.png";
 import Image from "next/image";
 
 const FloatingGitHub = () => {
@@ -14,9 +13,11 @@ const FloatingGitHub = () => {
       title="View Source on GitHub"
     >
       <Image
-        src={githubImg}
+        src="/github.png"
         alt="github-icon"
         className={styles.imgIcon}
+        width={40}
+        height={40}
       />
     </a>
   );
