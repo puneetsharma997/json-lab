@@ -144,6 +144,7 @@ export const toolNavigation = [
           "fake",
           "generate",
         ],
+        comingSoon: true,
       },
 
       {
@@ -157,6 +158,7 @@ export const toolNavigation = [
           "visualize",
           "nodes",
         ],
+        comingSoon: true,
       },
     ],
   },

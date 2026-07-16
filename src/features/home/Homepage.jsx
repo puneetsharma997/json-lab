@@ -49,6 +49,12 @@ const HomePage = () => {
                         <Icon size={24} strokeWidth={1.5} />
                       </div>
                       <h3 className={styles.cardTitle}>{tool.title}</h3>
+
+                      {tool.comingSoon && (
+                        <span className={styles.comingSoonBadge}>
+                          Coming Soon
+                        </span>
+                      )}
                     </div>
                     <p className={styles.cardDescription}>
                       {tool.description}
