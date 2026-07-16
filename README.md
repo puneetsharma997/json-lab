@@ -33,6 +33,13 @@ JSON Lab is an enterprise-grade web application built to handle complex JSON ope
   - Uses `to-json-schema` for Draft-07 schema derivation.
   - Uses `json-schema-to-zod` for robust schema validation code.
 
+### 🔍 JSONPath Tester (Utility)
+- **Live Query Evaluation:** Safely evaluate complex JSONPath expressions in real-time using the robust `jsonpath-plus` engine against deeply nested objects and arrays.
+- **Performance Optimized (Debouncing):** Built-in 300ms debouncing ensures the UI never blocks or freezes during rapid typing or deep structural scans.
+- **Graceful Error Handling:** Incomplete query syntax (e.g., typing `$.[`) or invalid JSON are caught silently via try/catch boundaries, preventing application crashes and returning clean fallback states (0 matches).
+- **Split-Pane Visualization:** Left pane strictly for raw JSON input, right pane for instantly formatted, read-only matched payload outputs.
+- **Match Diagnostics:** Custom status bar dynamically computes and displays the exact number of matches found for the currently active query.
+
 ### 🌳 Visual Tree Mode
 - **Semantic Rendering:** View JSON as an interactive, collapsible tree hierarchy.
 - **Custom Theming:** Tree view colors are perfectly synced with the Monaco Editor's VS Code-like theme.
@@ -81,6 +88,7 @@ JSON Lab is an enterprise-grade web application built to handle complex JSON ope
 - **json-to-ts** (TypeScript interface generation)
 - **to-json-schema** (JSON Schema Draft-07 generation)
 - **json-schema-to-zod** (Zod validation schema generation)
+- **jsonpath-plus** (Advanced JSONPath evaluation engine)
 
 ---
 
@@ -178,4 +186,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## 🔮 Future Scope (Planned Tools)
 
 As outlined in the `tool-navigation.js` configuration, JSON Lab is built to scale into a massive developer suite. Upcoming features include:
-- **Utilities:** JSONPath Tester, Mock Data Generator, and Interactive Node Visualizer.
+- **Utilities:** Mock Data Generator, and Interactive Node Visualizer.
